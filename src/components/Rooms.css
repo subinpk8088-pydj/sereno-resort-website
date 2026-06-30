@@ -1,0 +1,35 @@
+.rooms-section { padding: 6rem 4rem; background: var(--sand); }
+.rooms-header { text-align: center; margin-bottom: 3.5rem; }
+.rooms-sub { font-size: 0.95rem; color: var(--muted); max-width: 420px; margin: 0 auto; }
+.rooms-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem;
+  max-width: 1300px; margin: 0 auto;
+}
+.room-card { background: var(--white); border-radius: 6px; overflow: hidden; box-shadow: 0 8px 28px var(--shadow); }
+.room-img-wrap { position: relative; aspect-ratio: 4/3; overflow: hidden; }
+.room-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
+.room-card:hover .room-img-wrap img { transform: scale(1.07); }
+.room-tag {
+  position: absolute; top: 1rem; left: 1rem;
+  background: var(--terracotta); color: var(--white);
+  font-size: 0.66rem; font-weight: 600; letter-spacing: 0.06em;
+  padding: 0.3rem 0.7rem; border-radius: 2px; text-transform: uppercase;
+}
+.room-info { padding: 1.5rem; }
+.room-info h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 500; color: var(--sage-dk); margin-bottom: 0.5rem; }
+.room-meta { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.25rem; }
+.dot { margin: 0 0.4rem; }
+.room-footer { display: flex; align-items: center; justify-content: space-between; }
+.room-price { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--terracotta-dk); font-weight: 500; }
+.room-night { font-size: 0.75rem; color: var(--muted); margin-left: 0.2rem; }
+.room-btn {
+  background: none; border: 1px solid var(--sage); color: var(--sage-dk);
+  padding: 0.55rem 1.2rem; border-radius: 2px; font-family: 'Jost', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.06em; cursor: pointer; transition: all 0.25s;
+}
+.room-btn:hover { background: var(--sage-dk); color: var(--sand); border-color: var(--sage-dk); }
+
+@media (max-width: 960px) {
+  .rooms-section { padding: 4rem 1.5rem; }
+  .rooms-grid { grid-template-columns: 1fr; max-width: 480px; }
+}

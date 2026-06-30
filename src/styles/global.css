@@ -1,0 +1,66 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --sand:        #faf6ee;
+  --sand-dk:     #f0e8d8;
+  --sage:        #8a9a7e;
+  --sage-dk:     #5e7053;
+  --sage-lt:     #b3c0a8;
+  --terracotta:  #c97a52;
+  --terracotta-dk:#a35d3a;
+  --pool:        #6fa8a3;
+  --pool-dk:     #4a7d78;
+  --white:       #ffffff;
+  --text:        #2e3328;
+  --muted:       #6f7a66;
+  --border:      #e4ddc9;
+  --shadow:      rgba(94,112,83,0.12);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--sand);
+  color: var(--text);
+  font-family: 'Jost', sans-serif;
+  overflow-x: hidden;
+  line-height: 1.65;
+}
+
+.section-label {
+  font-size: 0.74rem; letter-spacing: 0.3em;
+  color: var(--terracotta-dk); text-transform: uppercase;
+  margin-bottom: 0.85rem; font-weight: 500;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.3rem, 4.6vw, 3.6rem);
+  color: var(--sage-dk); line-height: 1.15;
+  font-weight: 500; margin-bottom: 1rem;
+}
+.section-title em { font-style: italic; color: var(--terracotta); font-weight: 500; }
+
+.divider { width: 50px; height: 1.5px; background: var(--terracotta); margin-bottom: 2rem; }
+
+.btn-primary {
+  background: var(--sage-dk); color: var(--sand);
+  border: none; padding: 0.9rem 2.4rem; border-radius: 2px;
+  font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;
+  transition: background 0.3s;
+}
+.btn-primary:hover { background: var(--terracotta-dk); }
+
+.btn-outline {
+  background: none; color: var(--sage-dk);
+  border: 1px solid var(--sage); padding: 0.9rem 2.4rem;
+  border-radius: 2px; font-family: 'Jost', sans-serif; font-size: 0.85rem;
+  font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+  cursor: pointer; transition: all 0.3s;
+}
+.btn-outline:hover { border-color: var(--terracotta); color: var(--terracotta-dk); }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--sand-dk); }
+::-webkit-scrollbar-thumb { background: var(--sage); border-radius: 3px; }
